@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <article>
+            <h2 id="name"></h2>
+            <p id="email"></p>
+            <p id="role"></p>
+         </article>
+    </main>
+    <script>
+        const Prenom ="Karim Benali";
+        const émail = "karim@exemple.com";
+        const role = "Administrateur";
+        const element = document.getElementById("name");
+        element.textContent = Prenom;
+        const info = document.getElementById("email");
+        info.textContent = émail;
+        const job = document.getElementById("role");
+        job.textContent = role;
+        console.log(role);
+    </script>
+</body>
+</html>

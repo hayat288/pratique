@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="cards">
+  <article class="card" data-user-id="3">
+    <h2 class="card-title"></h2>
+    <p class="card-email"></p>
+    <p class="card-role"></p>
+  </article>
+  <article class="card" data-user-id="1">
+    <h2 class="card-title"></h2>
+    <p class="card-email"></p>
+    <p class="card-role"></p>
+  </article>
+  <article class="card" data-user-id="4">
+    <h2 class="card-title"></h2>
+    <p class="card-email"></p>
+    <p class="card-role"></p>
+  </article>
+  <article class="card" data-user-id="2">
+    <h2 class="card-title"></h2>
+    <p class="card-email"></p>
+    <p class="card-role"></p>
+  </article>
+</div>
+    </main>
+    <script>
+        const users = [
+  { id: 1, nom: "Karim Benali", email: "karim@exemple.com", role: "Administrateur" },
+  { id: 2, nom: "Sofia Martin", email: "sofia@exemple.com", role: "Éditrice" },
+  { id: 3, nom: "Yanis Haddad", email: "yanis@exemple.com", role: "Développeur" },
+  { id: 4, nom: "Léa Dubois", email: "lea@exemple.com", role: "Designer" },
+];
+
+for (let i = 0; i < users.length; i++) {
+    const user = users[i];
+const card = document.querySelector(`[data-user-id="${user.id}"]`)
+card.querySelector(".card-title").textContent = user.nom;
+card.querySelector(".card-email").textContent = user.email;
+card.querySelector(".card-role").textContent = user.role;
+}
+    </script>
+    <style>
+        .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+   }
+   .card{
+    border: 1px solid rgb(156, 154, 154);
+    padding:0 10px ;
+   }
+    </style>
+</body>
+</html>

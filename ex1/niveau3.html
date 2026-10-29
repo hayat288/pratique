@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <article class="Card entière">
+            <h2 class="card-title"></h2>
+            <p class="card-email"></p>
+            <p class="card-job"></p>
+         </article>
+    </main>
+    <script>
+        const Prenom ="Karim Benali";
+        const émail = "karim@exemple.com";
+        const role = "Administrateur";
+        const element = document.getElementsByClassName("card-title");
+        element[0].textContent = Prenom;
+        const info = document.getElementsByClassName("card-email");
+        info[0].textContent = émail;
+        const job = document.getElementsByClassName("card-job");
+        job[0].textContent = role;
+        console.log(role)
+    </script>
+</body>
+</html>
