@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <main>
+    <label>Mot de passe (8 caractères minimum)
+    <input type="password" id="password">
+    </label>
+   </main> 
+   <style>
+    .invalid { border: 4px solid #dc2626 !important; }
+    .valid { border: 4px solid #16a34a !important; }
+   </style>
+   <script>
+    const mdp = document.getElementById("password")
+    mdp.addEventListener("input" , function(){
+        if ( mdp.value.length < 8){
+            mdp.classList.remove("valid");
+            mdp.classList.add("invalid");
+        }else{
+            mdp.classList.remove("invalid")
+            mdp.classList.add("valid")
+        }
+    })
+   </script>
+</body>
+</html>

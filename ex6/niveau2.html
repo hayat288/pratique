@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <ul id="todo">
+  <li>Apprendre le DOM</li>
+  <li>Pratiquer les événements</li>
+</ul>
+<div class="row">
+  <input type="text" id="todo-input" placeholder="Nouvelle tâche">
+  <button id="add-btn">Ajouter</button>
+</div>
+    </main>
+    <style>
+  #todo li { cursor: pointer; padding: 4px 0; }
+  .done { text-decoration: line-through; opacity: 0.5; }
+</style>
+<script>
+    const liste = document.getElementById("todo");
+    const champ = document.getElementById("todo-input");
+    const btn = document.getElementById("add-btn");
+    liste.addEventListener("click", function (event) {
+            const li = event.target.closest("li");
+            if (!li) return;
+            li.classList.toggle("done");
+    })
+    btn.addEventListener("click", function () {
+            if (champ.value.trim() === "") return;
+
+            const li = document.createElement("li");
+            li.textContent = champ.value;
+            liste.appendChild(li);
+            champ.value = "";
+    });
+
+</script>
+</body>
+</html>

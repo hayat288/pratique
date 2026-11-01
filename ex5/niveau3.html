@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form id="signup-form" class="stack">
+           <label>Nom d'utilisateur
+           <input type="text" id="name" required>
+           </label>
+           <label>Email
+           <input type="email" id="email" required>
+           </label>
+           <button type="submit" class="submit">Envoyer</button>
+        </form>
+    </main>
+    <style>
+        .stack{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .submit{
+            background-color: blue;
+            width: 100px;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+    <script>
+        const nom = document.getElementById("name")
+        const email = document.getElementById("email")
+        const formulaire = document.getElementById("signup-form")
+        formulaire.addEventListener("submit", function(event){
+             event.preventDefault();
+             const aoutput = {
+                nom : nom.value,
+                email : email.value
+             }
+             console.log(aoutput)
+        })
+    </script>
+</body>
+</html>

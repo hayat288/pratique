@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="products" class="grid">
+        </div>
+    </main>
+    <style>
+        .product-card { border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: #fff; }
+        .product-card img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; background: #f1f5f9; }
+        .product-card .body { padding: 10px 12px; }
+        .product-card h3 { margin: 0 0 4px; font-size: 1rem; }
+        .product-card .price { margin: 0; color: #1d4ed8; font-weight: 600; }
+    </style>
+    <script>
+        const products = [
+            { titre: "Casque audio", prix: 89.9, image: "casque.png" },
+            { titre: "Montre classique", prix: 129, image: "montre.png" },
+            { titre: "Sac à dos", prix: 59.5, image: "sac.png" },
+];
+const container = document.getElementById("products")
+container.innerHTML = ""
+
+products.forEach(function (produit){
+    container.innerHTML += `<article class="product-card">
+                <img src="${produit.image}" alt="${produit.titre}">
+                <div class="body">
+                    <h3>${produit.titre}</h3>
+                    <p class="price">${produit.prix} €</p>
+                </div>
+            </article>
+        `;
+})
+
+    </script>
+</body>
+</html>

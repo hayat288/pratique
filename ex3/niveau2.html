@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <button id="toggle-btn">Afficher/Masquer les détails</button>
+        <div id="details" class="card" style="display: none;">
+           <p>Voici les détails cachés. Le DOM permet de les révéler sans recharger la page.</p>
+        </div>
+    </main>
+    <style>
+        #toggle-btn{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+    const btn = document.getElementById("toggle-btn") 
+    const paraghraphe = document.getElementById("details")
+    btn.addEventListener("click",function(){
+        if (paraghraphe.style.display === "none"){
+            paraghraphe.style.display = "block"
+        }else{
+            paraghraphe.style.display ="none";
+        }
+    });
+    </script>
+</body>
+</html>
