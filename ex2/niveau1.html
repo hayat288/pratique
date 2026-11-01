@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <button id="boutton">cliquez-moi</button>
+    </main>
+    <style>
+        #boutton{
+            box-sizing: border-box;
+            background-color: rgb(38, 38, 183);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        const monBoutton = document.getElementById("boutton")
+        monBoutton.addEventListener("click" , function(){
+            console.log("le boutton a été clique !");
+        })
+    </script>
+</body>
+</html>

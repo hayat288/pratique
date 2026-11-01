@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2 id="counter">0</h2>
+        <button id="increment">Incrémenter</button>
+    </main>
+    <style>
+        #increment{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        let count = 0
+        const number = document.getElementById("counter")
+        const boutn = document.getElementById("increment")
+
+        boutn.addEventListener("click",function(){
+            count++;
+            number.textContent = count
+        })
+    </script>
+</body>
+</html>

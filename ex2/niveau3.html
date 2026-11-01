@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="boutton">
+        <button class="btn">bouton A</button>
+        <button class="btn">bouton B</button>
+        <button class="btn">bouton C</button>
+        </div>
+    </main>
+    <style>
+        .btn{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        const boutton = document.querySelectorAll(".btn")
+        function changerText(event){
+            event.target.textContent = "cliqué !"
+        }
+        boutton.forEach(function(butn){
+            butn.addEventListener("click",changerText)
+        })
+    </script>
+    
+</body>
+</html>
